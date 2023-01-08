@@ -12,16 +12,16 @@ public class BJ_2839 {
         int b = 0;
 
         while (true) {
-            if (a % 5 == 0) {
+            if (a % 5 == 0) { // 5로 나누어 떨어지면 최소
                 b += a / 5;
                 System.out.println(b);
                 break;
-            } else {
+            } else { // 5로 나누어 떨어지지 않으면 3을 빼서 다시 반복
                 a -= 3;
                 b++;
             }
 
-            if (a < 0) {
+            if (a < 0) { // a < 3이 아닌 이유 : a가 0이 되었을 때도 생각해야 함
                 System.out.println("-1");
                 break;
             }

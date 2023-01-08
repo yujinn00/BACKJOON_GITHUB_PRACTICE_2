@@ -6,25 +6,22 @@ import java.util.StringTokenizer;
 public class BJ_3003 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        StringBuilder sb = new StringBuilder();
 
         int[] piece = new int[6];
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
-
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < piece.length; i++) {
             piece[i] = Integer.parseInt(st.nextToken());
         }
 
-        bw.write(1 - piece[0] + " ");
-        bw.write(1 - piece[1] + " ");
-        bw.write(2 - piece[2] + " ");
-        bw.write(2 - piece[3] + " ");
-        bw.write(2 - piece[4] + " ");
-        bw.write(8 - piece[5] + " ");
+        sb.append(1 - piece[0]).append(" ");
+        sb.append(1 - piece[1]).append(" ");
+        sb.append(2 - piece[2]).append(" ");
+        sb.append(2 - piece[3]).append(" ");
+        sb.append(2 - piece[4]).append(" ");
+        sb.append(8 - piece[5]);
 
-        br.close();
-        bw.flush();
-        bw.close();
+        System.out.println(sb);
     }
 }

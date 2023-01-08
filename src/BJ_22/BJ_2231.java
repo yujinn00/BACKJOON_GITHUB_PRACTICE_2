@@ -9,22 +9,22 @@ public class BJ_2231 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int a = Integer.parseInt(br.readLine());
-        int b = 0;
+        boolean b = false;
 
         for (int i = 1; i <= 1000000; i++) {
             if (a == dec_sum(i)) {
                 System.out.println(i);
-                b++;
+                b = true;
                 break;
             }
         }
 
-        if (b == 0) {
+        if (!b) {
             System.out.println("0");
         }
     }
 
-    public static int dec_sum(int a) {
+    public static int dec_sum(int a) { // 분해합 구하는 함수
         int sum = a;
 
         while (a != 0) {

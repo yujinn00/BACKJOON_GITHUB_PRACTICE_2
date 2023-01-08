@@ -25,12 +25,11 @@ public class BJ_3036 {
 
         System.out.println(sb);
     }
-
+    // 기약 분수를 출력하기 위해서는 최대공약수를 활용해야 함
     public static int GCD(int a, int b) {
         if (b == 0) {
             return a;
-        }
-        else {
+        } else {
             return GCD(b, a % b);
         }
     }

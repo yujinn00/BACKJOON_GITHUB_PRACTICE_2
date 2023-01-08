@@ -24,16 +24,15 @@ public class BJ_1934 {
         System.out.println(sb);
     }
 
-    public static int GCD(int a, int b) {
+    public static int GCD(int a, int b) { // 최대공약수 // 크기 순서 상관 X (정석은 큰 수가 앞임)
         if (b == 0) {
             return a;
-        }
-        else {
+        } else {
             return GCD(b, a % b);
         }
     }
 
-    public static int LCM(int a, int b) {
+    public static int LCM(int a, int b) { // 최소공배수 // 크기 순서 상관 X (정석은 큰 수가 앞임)
         return a * b / GCD(a, b);
     }
 }
