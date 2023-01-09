@@ -7,17 +7,20 @@ import java.io.InputStreamReader;
 public class BJ_11653 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 
         int a = Integer.parseInt(br.readLine());
-        int b = 2;
+        int b = 2; // 소인수 초기화
 
         while (a != 1) {
             if (a % b == 0) {
                 a /= b;
-                System.out.println(b);
+                sb.append(b).append("\n");
             } else {
                 b++;
             }
         }
+
+        System.out.println(sb);
     }
 }

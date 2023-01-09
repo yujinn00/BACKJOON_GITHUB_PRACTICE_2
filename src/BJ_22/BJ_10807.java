@@ -10,18 +10,16 @@ public class BJ_10807 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int a = Integer.parseInt(br.readLine());
-        int[] b = new int[a];
-        int[] c = new int[201];
+        int[] b = new int[201];
 
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         for (int i = 0; i < a; i++) {
-            b[i] = Integer.parseInt(st.nextToken()) + 100;
-            c[b[i]]++;
+            b[Integer.parseInt(st.nextToken()) + 100]++;
         }
 
-        int d = Integer.parseInt(br.readLine());
+        int c = Integer.parseInt(br.readLine());
 
-        System.out.println(c[d + 100]);
+        System.out.println(b[c + 100]);
     }
 }

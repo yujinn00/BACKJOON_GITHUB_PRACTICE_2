@@ -1,3 +1,4 @@
+// 카운팅 정렬 : O(N)
 package BJ_22;
 
 import java.io.BufferedReader;
@@ -12,17 +13,17 @@ public class BJ_10989 {
         int a = Integer.parseInt(br.readLine());
         int[] b = new int[10001];
 
-        for(int i = 0; i < a; i++) {
+        for (int i = 0; i < a; i++) {
             b[Integer.parseInt(br.readLine())]++;
         }
 
-        for(int i = 1; i <= 10000; i++) {
+        for (int i = 0; i < b.length; i++) {
             while (b[i] > 0) {
-                sb.append(i).append('\n');
+                sb.append(i).append("\n");
                 b[i]--;
             }
         }
 
-        System.out.print(sb);
+        System.out.println(sb);
     }
 }
