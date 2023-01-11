@@ -6,34 +6,24 @@ import java.util.StringTokenizer;
 public class BJ_25304 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int a = Integer.parseInt(br.readLine());
         int b = Integer.parseInt(br.readLine());
-
-        int[] c = new int[b];
-        int[] d = new int[b];
         int sum = 0;
 
-        StringTokenizer st;
-
         for (int i = 0; i < b; i++) {
-            st = new StringTokenizer(br.readLine());
+            StringTokenizer st = new StringTokenizer(br.readLine());
 
-            c[i] = Integer.parseInt(st.nextToken());
-            d[i] = Integer.parseInt(st.nextToken());
+            int c = Integer.parseInt(st.nextToken());
+            int d = Integer.parseInt(st.nextToken());
 
-            sum += c[i] * d[i];
+            sum += c * d;
         }
 
-        if (sum == a) {
-            bw.write("Yes");
+        if (a == sum) {
+            System.out.println("Yes");
         } else {
-            bw.write("No");
+            System.out.println("No");
         }
-
-        br.close();
-        bw.flush();
-        bw.close();
     }
 }

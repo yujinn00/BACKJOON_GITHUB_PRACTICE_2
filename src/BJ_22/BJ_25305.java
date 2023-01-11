@@ -6,7 +6,6 @@ import java.util.*;
 public class BJ_25305 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         int a = Integer.parseInt(st.nextToken());
@@ -18,9 +17,9 @@ public class BJ_25305 {
         for (int i = 0; i < a; i++) {
             c[i] = Integer.parseInt(st.nextToken());
         }
-        
+
         Arrays.sort(c);
 
-        System.out.println(c[a - b]);
+        System.out.println(c[a - b]); // 커트라인 출력
     }
 }
