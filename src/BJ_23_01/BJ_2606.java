@@ -13,8 +13,8 @@ public class BJ_2606 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        v = Integer.parseInt(br.readLine()); // 컴퓨터 개수 (정점)
-        e = Integer.parseInt(br.readLine()); // 컴퓨터 쌍 개수 (간선)
+        v = Integer.parseInt(br.readLine()); // 컴퓨터 개수 (정점 개수)
+        e = Integer.parseInt(br.readLine()); // 컴퓨터 쌍 개수 (간선 개수)
 
         vertex = new boolean[v + 1]; // 감염된 컴퓨터를 체크하기 위한 1차원 배열
         edge = new boolean[v + 1][v + 1]; // 쌍으로 연결된 컴퓨터를 체크하기 위한 2차원 배열
